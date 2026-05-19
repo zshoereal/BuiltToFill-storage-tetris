@@ -1,5 +1,6 @@
 # Storage Tetris
 
+*These code are made with Cursor and Cursor writes this README.
 Storage Tetris is an innovative twist on the classic Tetris game that explores the relationship between gameplay and digital storage space. As you play, the game creates physical files to store each block, leading to unique visual effects and gameplay challenges as storage space fills up.
 
 ## Features
