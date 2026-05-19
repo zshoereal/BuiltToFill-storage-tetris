@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage Tetris</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            margin: 0;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+        .game-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        canvas {
+            border: 2px solid #333;
+        }
+        .game-info {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .controls {
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            min-width: 150px;
+        }
+        .controls p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Storage Tetris</h1>
+    <div class="game-info">
+        <div>Score: <span id="score">0</span></div>
+        <div>Files Created: <span id="filesCreated">0</span></div>
+    </div>
+    <div class="game-container">
+        <div class="controls">
+            <p>Controls:</p>
+            <p>← → : Move left/right</p>
+            <p>↑ : Rotate</p>
+            <p>↓ : Move down</p>
+            <p>Space : Drop</p>
+        </div>
+        <canvas id="gameCanvas" width="300" height="600"></canvas>
+    </div>
+    <script>
+        // Prevent arrow key scrolling
+        window.addEventListener("keydown", function(e) {
+            if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+                e.preventDefault();
+            }
+        }, false);
+    </script>
+    <script src="tetris.js"></script>
+</body>
+</html> 
